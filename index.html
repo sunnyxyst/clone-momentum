@@ -17,9 +17,14 @@
     <div class="content">
       <img src="" alt="" id="bgImg" />
       <header>
-        <h2 id="clock"></h2>
+        <!-- clock -->
+        <ul id="clock">
+          <li class="date-display"></li>
+          <li class="time-display"></li>
+        </ul>
       </header>
       <section class="hello-section">
+        <!-- todo form -->
         <form action="" id="todo-form">
           <input
             type="text"
@@ -29,7 +34,9 @@
             placeholder="Write a To Do and Press Enter"
           />
         </form>
+        <!-- todo list -->
         <ul id="todo-list"></ul>
+        <!-- login form -->
         <form id="login-wrap" class="hidden">
           <input
             type="text"
@@ -40,13 +47,17 @@
           />
           <button type="submit" id="loginBtn">Log-In</button>
         </form>
+        <!-- loggin greeting -->
         <h1 class="hidden" id="welcome-msg">
           Welcome! <span class="user-name"></span>
         </h1>
+        <!-- weather info -->
         <div id="weatherContainer"></div>
+        <!-- location city info -->
         <div id="cityContainer"></div>
       </section>
       <footer>
+        <!-- quotes -->
         <div id="quote">
           <span></span>
           <span></span>
