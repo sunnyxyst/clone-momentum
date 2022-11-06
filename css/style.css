@@ -32,7 +32,7 @@ input:focus-visible {
 input::-webkit-input-placeholder{
   color:#dfbdd2;
  }
- 
+
 .content {
   position: relative;
   flex-direction: column;
@@ -187,4 +187,71 @@ header {
 
 .weather-icon {
   margin-left: 15px;
+}
+
+.weather-wrap .ap-info dl {
+  display: flex;
+  flex-wrap: wrap;
+  flex:1;
+  margin-top:10px;
+}
+.weather-wrap .ap-info dt {
+  flex: 0 0 50%;
+  font-size: 1.3rem;
+  margin-top:5px;
+}
+.weather-wrap .ap-info dd {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top:5px;
+}
+
+.weather-wrap .ap-info dd::before,
+.weather-wrap .ap-info dd::after {
+  display: block;
+}
+
+.weather-wrap .ap-info dd::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius:50%;
+}
+
+.weather-wrap .ap-info dd::after {
+  margin-left: 8px;
+}
+
+.weather-wrap .ap-info dd.normal::before {
+  background-color:rgb(132, 132, 132);
+}
+
+.weather-wrap .ap-info dd.best::before {
+  background-color:#148ff3;
+}
+
+.weather-wrap .ap-info dd.bad::before {
+  background-color:#f4a824;
+}
+
+.weather-wrap .ap-info dd.worst::before {
+  background-color:#bf0000;
+}
+
+.weather-wrap .ap-info dd.normal::after {
+  content: '보통';
+}
+
+.weather-wrap .ap-info dd.best::after {
+  content: '좋음';
+}
+
+.weather-wrap .ap-info dd.bad::after {
+  content: '나쁨';
+}
+
+.weather-wrap .ap-info dd.worst::after {
+  content: '매우 나쁨';
 }
