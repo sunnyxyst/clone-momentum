@@ -15,15 +15,37 @@
   </head>
   <body>
     <div class="content">
-      <img src="" alt="" id="bgImg" />
+      <div id="bgImg"></div>
       <header>
         <!-- clock -->
         <ul id="clock">
           <li class="date-display"></li>
           <li class="time-display"></li>
         </ul>
+        <!-- weather -->
+        <img src="" class="weather-icon" />
+        <ul class="weather-wrap">
+          <li class="weather-info">
+          </li>
+          <li class="location-info"></li>
+        </ul>
       </header>
       <section class="hello-section">
+        <!-- loggin greeting -->
+        <h1 class="hidden" id="welcome-msg">
+          Welcome! <span class="user-name"></span>
+        </h1>
+        <!-- login form -->
+        <form id="login-wrap" class="hidden">
+          <input
+            type="text"
+            id="userName"
+            required
+            maxlength="15"
+            placeholder="What is you name?"
+          />
+          <button type="submit" id="loginBtn">Log-In</button>
+        </form>
         <!-- todo form -->
         <form action="" id="todo-form">
           <input
@@ -36,35 +58,14 @@
         </form>
         <!-- todo list -->
         <ul id="todo-list"></ul>
-        <!-- login form -->
-        <form id="login-wrap" class="hidden">
-          <input
-            type="text"
-            id="userName"
-            required
-            maxlength="15"
-            placeholder="What is you name?"
-          />
-          <button type="submit" id="loginBtn">Log-In</button>
-        </form>
-        <!-- loggin greeting -->
-        <h1 class="hidden" id="welcome-msg">
-          Welcome! <span class="user-name"></span>
-        </h1>
-        <!-- weather -->
-        <img src="" class="weather-icon" />
-        <ul class="weather-wrap">
-          <li class="weather-info">
-          </li>
-          <li class="location-info"></li>
-        </ul>
+        
       </section>
       <footer>
         <!-- quotes -->
-        <div id="quote">
-          <span></span>
-          <span></span>
-        </div>
+        <ul id="quotes">
+          <li class="quote"></li>
+          <li class="author"></li>
+        </ul>
       </footer>
     </div>
 

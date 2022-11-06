@@ -5,6 +5,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  color:#fff;
 }
 body {
   font-size: 1rem;
@@ -16,6 +17,22 @@ ul,
 li {
   list-style: none;
 }
+
+input {
+  border: none;
+  border-bottom: 2px solid #cc95b7;
+  background-color: transparent;
+  padding: 1rem;
+}
+
+input:focus-visible {
+  outline:none;
+}
+
+input::-webkit-input-placeholder{
+  color:#dfbdd2;
+ }
+ 
 .content {
   position: relative;
   flex-direction: column;
@@ -37,7 +54,13 @@ footer {
   width: 100%;
   display: flex;
   justify-content: center;
+  padding:3rem 2rem;
 }
+
+header {
+  justify-content: space-between;
+}
+
 .hidden {
   display: none;
 }
@@ -49,25 +72,43 @@ footer {
   bottom: 0;
   right: 0;
   z-index: -1;
-  opacity: 0.6;
   width:100%;
   height:100%;
-  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
 }
+
+#bgImg::after {
+  content:'';
+  display: block;
+  width:100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0));
+}
+
+
+#loginBtn {
+  border: none;
+  padding: 0.7rem 1.3rem;
+  border-radius: 30px;
+  color: #fff;
+  background: #cc95b7;
+ }
 
 #welcome-msg {
   font-size: 3rem;
-  padding: 5rem;
   font-family: "Outfit", sans-serif;
   text-transform: uppercase;
 }
+
 #welcome-msg span {
   font-size: inherit;
   font-family: inherit;
 }
 
 #clock {
-  padding: 3rem 0;
+  padding: 0;
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -83,6 +124,7 @@ footer {
 #clock li {
   display: flex;
   justify-content: space-between;
+  color:#fff;
 }
 
 #clock li:last-child {
@@ -109,46 +151,35 @@ footer {
   padding: 4rem;
 }
 
-#quote {
-  font-family: "Caveat", cursive;
-  margin: 3rem 0;
+#quotes {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1.25rem 2rem;
-  background: rgba(255, 255, 255, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 25px;
 }
 
-#quote span {
-  font-family: inherit;
+#quotes li {
+  font-family: "Caveat", cursive;
+  color:#d00054;
 }
 
-#quote span:first-child {
+#quotes li:first-child {
   font-size: 1.75rem;
   font-weight: bold;
 }
 
 .weather-wrap {
-  position:absolute;
-  top:3rem;
-  right: 3rem;
-  padding: 1.25rem 2rem;
-  border-radius: 25px;
-  background: rgba(255, 255, 255, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  padding: 0;
   display: flex;
   align-items: stretch;
   justify-content: center;
   flex-direction: column;
   min-width:292px;
-  min-height:131px;
 }
 .weather-wrap li {
   font-size:2rem;
   font-weight: bold;
-  color:#0c808f;
+  color:#fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
